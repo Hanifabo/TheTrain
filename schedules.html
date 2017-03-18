@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" ></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="./assets/javascript/app.js"></script>
+    <script src="./assets/javascript/LocalDB.js"></script>
+    <script>
+        window.addEventListener('load',function () {
+            var store = {TrainName:"tname", Destination:"dtions",Frequency:"frqncy",NextArrival:"ntArvl" ,MinutesAway:"mAway"  };
+
+            var train = new Train(store);
+            train.populateTable();
+        })
+
+    </script>
+
+    <title>JS Bin</title>
+</head>
+<body>
+
+<header>
+    <div id="banner">
+        <img src="assets/images/rsz_train.jpg" height="200" width="980"/>
+    </div>
+
+</header>
+
+<nav>
+    <div class="headliner" id="login">
+        <a href="">Sign In</a>
+    </div>
+
+</nav>
+
+<div id="locatTrain">
+
+    <br>
+
+    <table id ="train" border="1" width="600" cellpadding="10" cellspacing="5">
+
+        <thead><tr><th width="250">Train Name</th><th>Destination</th> <th>Frequency(min)</th> <th>Next Arrival</th> <th>Minutes Away</th></tr></thead>
+        <tbody>
+
+        </tbody>
+        <tfoot></tfoot>
+
+
+    </table>
+    <button id="displaySchdule"> <a href="index.html"> Return to main</a></button>
+    </div>
+
+</div>
+
+
+
+<footer>
+    <p> CONNECT WITH US
+    </p>
+</footer>
+
+</div>
+</body>
+
+
+</html>
+
+
+
+
+
+
+

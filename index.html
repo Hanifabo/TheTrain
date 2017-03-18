@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>tPolar Express</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.min.js"></script>
+    <script type="text/javascript"  src="./assets/javascript/app.js"></script>
+</head>
+<body>
+
+<div id ="mainContainer">
+
+    <header>
+        <div id="banner">
+                <img src="assets/images/rsz_train.jpg" height="200" width="980"/>
+        </div>
+
+    </header>
+
+    <nav>
+        <div class="headliner1"  id="search">
+            <input type="text" id="searchba" placeholder="Search train schedule">
+            <button id="searchbtn">search</button>
+        </div>
+        <div class="headliner" id="login">
+            <button id="singIn">Sign In</button>
+        </div>
+
+    </nav>
+
+    <div id="locatTrain">
+
+        <form id="shiftLeft">
+            <br>
+        <label>From</label>
+            <input type="test"class="textFiled">
+            <label>To</label>
+            <input type="text"class="textFiled">
+            <label>Departs</label>
+            <input type="date" class="textFiled">
+            <button id="findT">Find Trains</button>
+        </form>
+        <br>
+
+        <div id="maps">
+            <img src="assets/images/Aust-map.jpg" height="320" width="980"/>
+        </div>
+
+    </div>
+
+    <div id="contentArea">
+
+        <a href="schedules.html" class="card cardv1">
+
+        </a>
+
+        <a href="schedules.html" class="card cardv2" >
+
+        </a>
+
+        <a href="schedules.html" class="card cardv3" >
+
+        </a>
+
+        <a href="schedules.html" class="card cardv4" >
+
+        </a>
+
+        <a href="schedules.html" class="card cardv5" >
+
+        </a>
+
+        <a href="schedules.html" class="card cardv6">
+
+        </a>
+
+       <a href="schedules.html" class="card cardv7" >
+
+       </a>
+
+       <a href="schedules.html" class="card cardv8">
+
+       </a>
+
+       </div>
+
+    <footer>
+        <p id="right"> &copy copy hanifa booba</p>
+    </footer>
+
+   </div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+    </div>
+
+</div>
+
+<script>
+
+    $(document).ready(function () {
+
+        var modal = document.getElementById('myModal');
+
+        var btn = document.getElementById("singIn");
+
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+
+    });
+</script>
+</body>
+
+
+</html>
+
+
+
+
+
+
+
