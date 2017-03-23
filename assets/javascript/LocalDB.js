@@ -86,6 +86,7 @@ Train.prototype.populateTable = function () {
 
     keys = Object.keys(Train.instances);
 
+
     for(var i=0; i< keys.length; i++){
         key = keys[i];
         row = table.insertRow();
@@ -102,10 +103,25 @@ Train.prototype.populateTable = function () {
         row.insertCell(-1).textContent = Train.instances[key].Frequency;
         row.insertCell(-1).textContent = Train.instances[key].NextArrival;
         row.insertCell(-1).textContent = Train.instances[key].MinutesAway;
+
+
     }
 }
 
 Train.prototype.addTrain = function (slots) {
 var trianm = new Train(slots);
 Train.instances[slots.TrainName] =trianm;
+}
+
+Train.prototype.createTestDaa = function () {
+
+    Train.instances["Trenton"] = new Train({TrainName:"Trenton Express", Destination:"Trenton", Frequency:25, NextArrival: "2017-03-25 05:33:64", MinutesAway:""});
+    Train.instances["Oregon"] = new Train({TrainName:"Oregon Trail", Destination:"Salem , Oregon",  Frequency:360, NextArrival:"2017-03-22 05:33:64", MinutesAway:""});
+    Train.instances["Midnight"] = new Train({TrainName:"Midnight Carriage", Destination:"Philadelphia",  Frequency:15, NextArrival:"2017-03-24 05:33:64", MinutesAway:""});
+    Train.instances["Sing"] = new Train({TrainName:"Sing Sing Caravan", Destination:"Atlanta",  Frequency:45, NextArrival:"2017-03-22 05:33:64", MinutesAway:""});
+    Train.instances["Boston"] = new Train({TrainName:"Boston Bus", Destination:"Boston",  Frequency:65, NextArrival:"2017-03-28 05:33:60", MinutesAway:""});
+    Train.instances["California"] = new Train({TrainName:"California Caravan", Destination:"San Francisco",  Frequency:2000, NextArrival:"2017-03-28 05:33:64", MinutesAway:""});
+    Train.instances["Analbens"] = new Train({TrainName:"Analbens's Train", Destination:"Florida",  Frequency:25, NextArrival:"2017-03-28 05:33:64", MinutesAway:""});
+
+    this.saveAll();
 }

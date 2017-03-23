@@ -9,6 +9,10 @@
     <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.min.js"></script>
     <script type="text/javascript"  src="./assets/javascript/app.js"></script>
+    <script type="text/javascript"  src="./assets/javascript/trainData.js"></script>
+    <script src="./assets/javascript/LocalDB.js"></script>
+    <script src="./assets/javascript/TimeHandler.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.min.js"></script>
 </head>
 <body>
 
@@ -36,13 +40,9 @@
 
         <form id="shiftLeft">
             <br>
-        <label>From</label>
-            <input type="test"class="textFiled">
-            <label>To</label>
-            <input type="text"class="textFiled">
-            <label>Departs</label>
-            <input type="date" class="textFiled">
-            <button id="findT">Find Trains</button>
+
+            <button id="findT"> Create Testing Data</button>
+            <button id="findsd"><a href="manageSchedule.html">Schedule Trains</a></button>
         </form>
         <br>
 
@@ -51,45 +51,101 @@
         </div>
 
     </div>
-
+    <div id="viewtab">Click Images to View Schedules</div>
     <div id="contentArea">
 
         <a href="schedules.html" class="card cardv1">
+            <div class="slate">
+                <p class="flash">Train Arrives <span id="cd1">hello this</span></p>
+            </div>
 
         </a>
 
         <a href="schedules.html" class="card cardv2" >
-
+            <div class="slate">
+                <p class="flash">Train Arrives <span id="cd2">Delayed</span></p>
+            </div>
         </a>
 
         <a href="schedules.html" class="card cardv3" >
-
+            <div class="slate">
+                <p class="flash">Train Arrives <span id="cd3">Delayed</span></p>
+            </div>
         </a>
 
         <a href="schedules.html" class="card cardv4" >
-
+            <div class="slate">
+                <p class="flash">Train Arrives <span id="cd4">Delayed</span></p>
+            </div>
         </a>
 
         <a href="schedules.html" class="card cardv5" >
-
+            <div class="slate">
+                <p class="flash">Train Arrives <span id="cd5">Delayed</span></p>
+            </div>
         </a>
 
         <a href="schedules.html" class="card cardv6">
-
+            <div class="slate">
+                <p class="flash">Train Arrives <span id="cd6">hello this</span></p>
+            </div>
         </a>
 
        <a href="schedules.html" class="card cardv7" >
-
+           <div class="slate">
+               <p class="flash">Train Arrives <span id="cd7">hello this</span></p>
+           </div>
        </a>
 
        <a href="schedules.html" class="card cardv8">
-
+           <div class="slate">
+               <p class="flash">Train Arrives <span id="cd8">Delayed</span></p>
+           </div>
        </a>
 
        </div>
 
     <footer>
         <p id="right"> &copy copy hanifa booba</p>
+
+        <div class="mother">
+                <div class="smedia">
+
+                    <img class="ftimg" src="assets/images/Facebook.png" height="30" width="30"/>
+                    <p class="fp">Like us on Facebook</p>
+                </div>
+
+                <div class="smedia">
+
+                    <img class="ftimg" src="assets/images/Twitter.png" height="30" width="30"/>
+                    <p class="fp"> Follow us on twitter</p>
+                </div>
+
+                <div class="smedia">
+
+                    <img class="ftimg" src="assets/images/YouTube.png" height="30" width="30"/>
+                    <p class="fp">Watch us on You tube</p>
+                </div>
+
+                <div class="smedia">
+
+                        <img class="ftimg" src="assets/images/WhatsApp.png" height="30" width="30"/>
+                    <p class="fp">whatsup us on WhatsApp</p>
+                </div>
+
+                <div class="smedia">
+
+                    <img class="ftimg" src="assets/images/Snapchat.png" height="30" width="30"/>
+                    <p class="fp">Snap us on SnapChat</p>
+                </div>
+
+                <div class="smedia">
+
+                    <img class="ftimg" src="assets/images/Instagram.png" height="30" width="30"/>
+                    <p class="fp">Linkup with us on Intagram</p>
+                </div>
+        </div>
+
     </footer>
 
    </div>
@@ -100,6 +156,7 @@
     <!-- Modal content -->
     <div class="modal-content">
         <span class="close">&times;</span>
+        <button id="findD"> Create Testing Data</button>
         <p>Some text in the Modal..</p>
     </div>
 
@@ -109,15 +166,15 @@
 
     $(document).ready(function () {
 
-        var modal = document.getElementById('myModal');
+        var modal = $(".modal");
 
-        var btn = document.getElementById("singIn");
+        $(".card").on('click' ,function() {
 
-        var span = document.getElementsByClassName("close")[0];
+            if (typeof(Storage) == "undefined") {
+                modal.style.display = "block";
+            };
+        });
 
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
         span.onclick = function() {
             modal.style.display = "none";
         }
@@ -130,6 +187,19 @@
 
     });
 </script>
+
+<script>
+        $(document).ready(function () {
+            var tm = new Timmer();
+            tm.countDown("cd1", 31);;
+            tm.countDown("cd7", 2);
+            tm.countDown("cd8", 6);
+            tm.countDown("cd6", 39);
+            tm.countDown("cd3", 1);
+        });
+
+    </script>
+
 </body>
 
 

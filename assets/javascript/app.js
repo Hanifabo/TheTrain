@@ -14,27 +14,43 @@ $(document).ready(function () {
 
 
     $("#frmbtn").on('click',function (event) {
-    event.preventDefault();
+        event.preventDefault();
         var tname = trainName.val();
         var dtions = dstination.val();
-        var frqncy =frequency.val();
+        var frqncy = frequency.val();
         var ntArvl = nextArrival.val();
-       var mAway =  minutesAwaya.val();
+        var mAway = minutesAwaya.val();
 
-        var store = {TrainName:tname, Destination:dtions,Frequency:frqncy,NextArrival:ntArvl ,MinutesAway:mAway  };
+        if ((tname.length <= 0 )|| (dtions.length <= 0) || (frqncy.length <= 0 )|| (ntArvl.length <= 0 )|| (mAway.length <= 0)) {
+           //var txtmssg = $("<h3>")
+            var mod =  $("#myModal");
+            mod.css('display','block');
 
-        var train = new Train(store);
+        } else {
+            var store = {TrainName: tname, Destination: dtions, Frequency: frqncy, NextArrival: ntArvl, MinutesAway: mAway};
 
-        //console.log(store+"  "+train.TrainName+"  "+train.Destination+"  "+train.Frequency+"  "+train.NextArrival+"  "+train.MinutesAway);
+            var train = new Train(store);
 
-        train.addTrain(store);
+            console.log(store + "  " + train.TrainName + "  " + train.Destination + "  " + train.Frequency + "  " + train.NextArrival + "  " + train.MinutesAway);
 
-        train.saveAll();
+            train.addTrain(store);
+
+            train.saveAll();
+
+            trainName.val("");
+            dstination.val("");
+            frequency.val("");
+            nextArrival.val("");
+            minutesAwaya.val("");
+            //train.loadAll();
+            console.log("ADDED SUCCESSFULLY");
+            // localStorage.setItem("hanifaDab", "Doing what i can");
+
+        }
 
 
-        train.loadAll();
 
-        localStorage.setItem("hanifaDab", "Doing what i can");
+
     })
 
     $("#displaySchdule").on('click',function () {
@@ -46,9 +62,35 @@ $(document).ready(function () {
     })
 
 
+    $("#findT, .card").on('click',function () {
+
+     console.log("we are here for testing ");
+        try {
+            if (typeof(Storage) !== "undefined"){
+
+                var store = {TrainName:"tname", Destination:"dtions",
+                    Frequency:"frqncy",NextArrival:"ntArvl" ,
+                    MinutesAway:"mAway"  };
+
+                var train = new Train(store);
+                train.createTestDaa();
+                console.log("Test Data Created")
+            }
+            else {
+                console.log( "Sorry! No Web Storage support");
+            }
+
+        }
+        catch(e){
+            console.log("NO DATA TO SAVE"+ "\n"+e);
+        }
+    });
+
+});
 
 
-})
+
+
 
 
 

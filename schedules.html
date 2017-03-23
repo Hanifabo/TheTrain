@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="stylesheet.css">
     <script src="./assets/javascript/app.js"></script>
     <script src="./assets/javascript/LocalDB.js"></script>
+    <script type="text/javascript"  src="./assets/javascript/trainData.js"></script>
+    <script src="./assets/javascript/LocalDB.js"></script>
+    <script src="./assets/javascript/TimeHandler.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.min.js"></script>
     <script>
         window.addEventListener('load',function () {
             var store = {TrainName:"tname", Destination:"dtions",Frequency:"frqncy",NextArrival:"ntArvl" ,MinutesAway:"mAway"  };
@@ -49,19 +53,65 @@
 
 
     </table>
-    <button id="displaySchdule"> <a href="index.html"> Return to main</a></button>
+    <button id="displaySchduleg"> <a href="index.html"> Return to main</a></button>
     </div>
 
 </div>
 
 
 
-<footer>
-    <p> CONNECT WITH US
-    </p>
-</footer>
+<<footer>
+    <p id="right"> &copy copy hanifa booba</p>
 
-</div>
+    <div class="mother">
+        <div class="smedia">
+
+            <img class="ftimg" src="assets/images/Facebook.png" height="30" width="30"/>
+            <p class="fp">Like us on Facebook</p>
+        </div>
+
+        <div class="smedia">
+
+            <img class="ftimg" src="assets/images/Twitter.png" height="30" width="30"/>
+            <p class="fp"> Follow us on twitter</p>
+        </div>
+
+
+        <div class="smedia">
+
+            <img class="ftimg" src="assets/images/YouTube.png" height="30" width="30"/>
+            <p class="fp">Watch us on You tube</p>
+        </div>
+
+        <div class="smedia">
+
+            <img class="ftimg" src="assets/images/WhatsApp.png" height="30" width="30"/>
+            <p class="fp">whatsup us on WhatsApp</p>
+        </div>
+
+        <div class="smedia">
+
+            <img class="ftimg" src="assets/images/Snapchat.png" height="30" width="30"/>
+            <p class="fp">Snap us on SnapChat</p>
+        </div>
+
+        <div class="smedia">
+
+            <img class="ftimg" src="assets/images/Instagram.png" height="30" width="30"/>
+            <p class="fp">Linkup with us on Intagram</p>
+        </div>
+    </div>
+
+</footer>
+<script>
+    $(document).ready(function () {
+        var timmer = new Timmer();
+        timmer.arrivalCalculator();
+
+
+
+    });
+</script>
 </body>
 
 

@@ -35,16 +35,15 @@
 
  #contentArea{
      padding: 10px;
-     background-color:black;
+
      opacity: 0.6;
  }
 
- header{
-     height: 200px;
-     margin-bottom: 10px;
-     border: 1px solid black;
-     background-color: white;
- }
+.slate{
+    width: 100%;
+    position: relative;
+    top: 0px;
+}
 
  header{
      height: 200px;
@@ -53,14 +52,14 @@
      background-color: white;
  }
 
- footer{
-     font-size: 12px;
-     color: white;
-     text-align: center;
-     height: 120px;
-     background-color: black;
-
+ header{
+     height: 200px;
+     margin-bottom: 10px;
+     border: 1px solid black;
+     background-color: white;
  }
+
+
 
  #banner{
      background-image: url("assets/images/rsz_train.jpg");
@@ -95,12 +94,13 @@
      margin: 18%;
      margin: 5px;
      background-color: white;
-     border: 1px solid gold;
+     border: 1px solid black;
  }
 
  .headliner{
      float: right;
-     margin-righ:20px ;
+     margin-righ:7px ;
+     margin-bottom:5px;
  }
 
  #searchba{
@@ -123,13 +123,14 @@
 
      position: relative;
      top: 10px;
-     height: 28px;
+     height: 22px;
      background-color: darkred;
      color: white;
-     font-size: 20px;
-     font-weight: bolder;
-     width: 80px;
-     margin-left: 25px;
+     font-size: 12px;
+     font-weight: bold;
+     width: 90px;
+     margin-left: 30px;
+     padding-bottom: 5px;
  }
  .headerContent{
      clear:both;
@@ -180,6 +181,15 @@
      color:black;
  }
 
+ #findsd{
+     float: right;
+     margin-right:15px;
+     margin-bottom: 15px;
+     height: 25px;
+     width: 120px;
+     background-color: goldenrod;
+     color:black;
+ }
  .modal {
      display: none;
      position: fixed;
@@ -257,7 +267,7 @@
 
  #schlForm{
      background-color: #fefefe;
-     height: 420px;
+     height: 520px;
      margin: 20px;
      border-radius: 5px;
 
@@ -306,4 +316,128 @@ fieldset{
  th {
      background-color:steelblue;
      color: white;
+ }
+ .flash,flashB,flashC,flashA{
+     display: none;
+     color: gold;
+     font-weight:bolder;
+     font-size: 30px;
+     padding-left:20px;
+     padding-right:20px;
+     margin-bottom: 0px;
+     text-shadow: 2px 2px black;
+     text-underline: none;
+     background-color: black;
+
+ }
+ .flash.active{
+     display:block;
+     color: gold;
+     text-decoration: none;
+     text-underline: none;
+ }
+
+ #singIn{
+     vertical-align:  middle;
+margin-bottom: 3px;
+ }
+ .mother{
+     display:  flex;
+     width: 45% ;
+     margin-bottom: 0px;
+     margin-top: 0px;
+ }
+
+ .smedia{
+     flex: 0 1 20%;
+     height: 30px;
+     font-size: 10px;
+ }
+
+span{
+    margin-left: 5px;
+    color: red;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top:2px;
+    padding-bottom:0px;
+    text-outline: none;
+}
+
+#maps{
+    height: 320px;
+    width: 980px;
+    margin-bottom: 30px ;
+    padding: 0;
+}
+
+ .ftimg{
+     display: inline-block;
+ }
+
+ footer{
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+ }
+ footer{
+     font-size: 12px;
+     color: white;
+     text-align: center;
+     height: 220px;
+     background-color: black;
+
+ }
+ #right{
+     flex: 1 1 100%;
+     height: 15px;
+     margin-bottom: 0px;
+ }
+ #line{
+     display: inline;
+     flex: 1 1 100%;
+     height: 1px;
+ }
+ .ftimg:hover{
+     padding: 4px;
+     background-color: deepskyblue;
+ }
+ .fp:hover{
+     font-size: 14px;
+     background-color: goldenrod;
+ }
+
+ #displaySchdule{
+    width: 140px;
+     height: 25px;
+     background-color: red;
+     color: white;
+     border-radius: 5px;
+     font-weight: bolder;
+     margin-bottom: 15px;
+     margin-left: 20px;
+ }
+ #viewtab{
+     width: 300px;
+     background-color: deepskyblue;
+     border-radius: 5px;
+     height: 25px;
+     font-weight: bolder;
+     color: white;
+    position:relative;
+     top: 10px;
+     vertical-align: middle;
+     text-align: center;
+     margin: 0 auto;
+ }
+
+ #displaySchduleg{
+     width: 140px;
+     height: 25px;
+     background-color: red;
+     color: white;
+     border-radius: 5px;
+     font-weight: bolder;
+     margin-bottom: 15px;
+     margin-left: 20px;
  }
